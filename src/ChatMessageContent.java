@@ -2,10 +2,10 @@
 
 import java.util.Date;
 
-public class ChatMessageContent {
-    public ChatUser sender;
-    public String message;
-    public Date creationDate;
+public final class ChatMessageContent {
+    private final ChatUser sender;
+    private final String message;
+    private final Date creationDate;
 
     /**
      *
@@ -23,7 +23,7 @@ public class ChatMessageContent {
         return sender;
     }
 
-    public String getMessage() {
+    public synchronized String getMessage() {
         return message;
     }
 
